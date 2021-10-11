@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/payroll_form.css">
     <script src="../js/payroll_form.js"></script>
+    <script src="../js/payroll_data.js"></script>
     <title>Employee payroll form</title>
 </head>
 
@@ -21,7 +22,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save();return false">
+        <form class="form" action="#" onsubmit="save()">
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
@@ -74,20 +75,20 @@
                 <label class="label text" for="department">Department</label>
                 <div>
                     <label class="text" for="hr">
-                    <input class="checkbox" type="checkbox" name="hr" id="hr" values="HR">
-                    HR</label>
+                        <input class="checkbox" type="checkbox" name="department" id="hr" value="HR">
+                        HR</label>
                     <label class="text" for="sales">
-                    <input class="checkbox" type="checkbox" name="sales" id="sales" values="Sales">
-                    Sales</label>
+                        <input class="checkbox" type="checkbox" name="department" id="sales" value="Sales">
+                        Sales</label>
                     <label class="text" for="finance">
-                    <input class="checkbox" type="checkbox" name="finance" id="finance" values="Finance">
-                    Finance</label>
+                        <input class="checkbox" type="checkbox" name="department" id="finance" value="Finance">
+                        Finance</label>
                     <label class="text" for="engineer">
-                    <input class="checkbox" type="checkbox" name="engineer" id="engineer" values="Engineer">
-                    Engineer</label>
+                        <input class="checkbox" type="checkbox" name="department" id="engineer" value="Engineer">
+                        Engineer</label>
                     <label class="text" for="others">
-                    <input class="checkbox" type="checkbox" name="others" id="others" values="Others">
-                    Others</label>
+                        <input class="checkbox" type="checkbox" name="department" id="others" value="Others">
+                        Others</label>
                 </div>
             </div>
             <div class="row-content">
@@ -100,7 +101,7 @@
                 <label class="label text" for="start-date">Start Date</label>
                 <div class="start-date">
                     <select id="day" name="Day" required>
-                        <option value = "" selected>Day</option>
+                        <option value="" selected>Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -134,22 +135,22 @@
                         <option value="31">31</option>
                     </select>
                     <select id="month" name="Month" required>
-                        <option value = "" selected>Month</option>
-                        <option value="Jan">January</option>
-                        <option value="Feb">February</option>
-                        <option value="Mar">March</option>
-                        <option value="Apr">April</option>
-                        <option value="May">May</option>
-                        <option value="Jun">June</option>
-                        <option value="Jul">July</option>
-                        <option value="Aug">August</option>
-                        <option value="Sep">September</option>
-                        <option value="Oct">October</option>
-                        <option value="Nov">November</option>
-                        <option value="Dec">December</option>
+                        <option value="" selected>Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
                     </select>
                     <select id="year" name="Year" required>
-                        <option value = "" selected>Year</option>
+                        <option value="" selected>Year</option>
                         <option value="2020">2021</option>
                         <option value="2020">2020</option>
                         <option value="2019">2019</option>
@@ -162,14 +163,14 @@
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
                 <textarea class="input" id="notes" name="notes" style="height: 100px;"></textarea>
-              </div>
-              <div class="button-parent">
+            </div>
+            <div class="button-parent">
                 <a href="./payroll_form.html" class="reset-button button cancel-button">Cancel</a>
                 <span class="submit-reset">
-                  <button type="submit" class="button submit-button" id="submit-button">Submit</button>
-                  <button type="reset" class="reset-button button">Reset</button>
+                    <button type="submit" class="button submit-button" id="submit-button">Submit</button>
+                    <button type="reset" class="reset-button button">Reset</button>
                 </span>
-              </div>
+            </div>
         </form>
     </div>
 

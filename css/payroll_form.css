@@ -107,6 +107,9 @@ label {
     resize: vertical;
 }
 
+.input[type = "range"]{
+    padding: 0%;
+}
 .profile-radio-content {
     display: flex;
     flex-direction: row;

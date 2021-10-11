@@ -112,9 +112,9 @@ label {
     flex-direction: row;
 }
 
-.profile-radio-content>label {
+.profile-radio-content {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
 }
 
@@ -133,13 +133,20 @@ select {
     letter-spacing: 0px;
     color: #42515f;
     background-color: transparent;
+    width: 100px;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
-
+.start-date{
+    flex: row wrap;
+    width: 100%;
+}
 .buttonParent {
     display: flex;
     margin-bottom: 10px;
     justify-content: space-between;
     margin-top: 20px;
+    flex-flow: row wrap;
 }
 
 .button {
@@ -155,6 +162,7 @@ select {
     padding: 7px 7px;
     border: 1px solid #707070;
     cursor: pointer;
+    margin: 10px;
 }
 
 .submitButton {
@@ -166,4 +174,69 @@ select {
 .cancelButton {
     text-decoration: none;
     text-align: center;
+    height: fit-content;
+}
+
+
+@media only screen and (max-width: 1200px){
+    
+    .form{
+        padding: 40px 90px;
+    }
+    
+}
+@media only screen and (max-width: 850px){
+    .cancelButton{
+        margin-left: 0px;
+    }
+    .form{
+        padding: 35px 55px;
+    }
+    select{
+        margin-right: 5px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .form{
+        margin-top: 10px;
+        padding: 10px 30px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .uploadButton{
+        justify-content: flex-start;
+    }
+
+    .profile-radio-button{
+        flex-flow: wrap;
+    }
+
+    .submit-reset{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        flex-flow: row wrap;
+    }
+
+    .button{
+        min-width: 40px;
+        width: 80%;
+        margin: 10px auto;
+    }
+    .label {
+        min-width: 100px;
+    }
+    
+    label {
+        padding: 3px 3px 3px 0;
+        display: inline-block;
+    }
+    .row-content{
+        flex-flow: row wrap;
+    }
+
 }

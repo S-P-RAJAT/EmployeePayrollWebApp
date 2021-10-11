@@ -72,16 +72,21 @@
             <div class="row-content">
                 <label class="label text" for="department">Department</label>
                 <div>
+                    <label class="text" for="hr">
                     <input class="checkbox" type="checkbox" name="hr" id="hr" values="HR">
-                    <label class="text" for="hr">HR</label>
+                    HR</label>
+                    <label class="text" for="sales">
                     <input class="checkbox" type="checkbox" name="sales" id="sales" values="Sales">
-                    <label class="text" for="sales">Sales</label>
+                    Sales</label>
+                    <label class="text" for="finance">
                     <input class="checkbox" type="checkbox" name="finance" id="finance" values="Finance">
-                    <label class="text" for="finance">Finance</label>
+                    Finance</label>
+                    <label class="text" for="engineer">
                     <input class="checkbox" type="checkbox" name="engineer" id="engineer" values="Engineer">
-                    <label class="text" for="engineer">Engineer</label>
+                    Engineer</label>
+                    <label class="text" for="others">
                     <input class="checkbox" type="checkbox" name="others" id="others" values="Others">
-                    <label class="text" for="others">Others</label>
+                    Others</label>
                 </div>
             </div>
             <div class="row-content">
@@ -92,7 +97,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="startDate">Start Date</label>
-                <div>
+                <div class="start-date">
                     <select id="day" name="Day" required>
                         <option value = "" selected>Day</option>
                         <option value="1">1</option>
@@ -159,10 +164,10 @@
               </div>
               <div class="buttonParent">
                 <a href="./payroll_form.html" class="resetButton button cancelButton">Cancel</a>
-                <div class="submit-reset">
+                <span class="submit-reset">
                   <button type="submit" class="button submitButton" id="submitButton">Submit</button>
                   <button type="reset" class="resetButton button">Reset</button>
-                </div>
+                </span>
               </div>
         </form>
     </div>

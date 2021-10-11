@@ -59,10 +59,14 @@
             <div class="row-content">
                 <label class="label text" for="gender">Gender</label>
                 <div>
-                    <input type="radio" name="gender" value="male">
-                    <label class="text" for="male">Male</label>
-                    <input type="radio" name="gender" value="female">
-                    <label class="text" for="female">Female</label>
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        <span class="text">Male</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        <span class="text">Female</span>
+                    </label>
                 </div>
             </div>
             <div class="row-content">
@@ -89,7 +93,8 @@
             <div class="row-content">
                 <label class="label text" for="startDate">Start Date</label>
                 <div>
-                    <select id="day" name="Day">
+                    <select id="day" name="Day" required>
+                        <option value = "" selected>Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -122,7 +127,8 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <select id="month" name="Month">
+                    <select id="month" name="Month" required>
+                        <option value = "" selected>Month</option>
                         <option value="Jan">January</option>
                         <option value="Feb">February</option>
                         <option value="Mar">March</option>
@@ -136,7 +142,8 @@
                         <option value="Nov">November</option>
                         <option value="Dec">December</option>
                     </select>
-                    <select id="year" name="Year">
+                    <select id="year" name="Year" required>
+                        <option value = "" selected>Year</option>
                         <option value="2020">2021</option>
                         <option value="2020">2020</option>
                         <option value="2019">2019</option>
@@ -146,6 +153,7 @@
                     </select>
                 </div>
             </div>
+            
         </form>
     </div>
 

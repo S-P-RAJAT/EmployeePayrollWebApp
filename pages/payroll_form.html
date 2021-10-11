@@ -26,7 +26,7 @@
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" name="name" id="name" placeholder="Your Name" required>
+                <input class="input" type="text" name="name" id="name" placeholder="Your Name" required autocomplete="off">
             </div>
             <div class="row-content">
                 <label class="label text">Profile image</label>
@@ -72,21 +72,21 @@
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for="department">Department</label>
+                <label class="label text" for="department" required>Department</label>
                 <div>
-                    <label class="text" for="hr">
+                    <label class="text">
                         <input class="checkbox" type="checkbox" name="department" id="hr" value="HR">
                         HR</label>
-                    <label class="text" for="sales">
+                    <label class="text">
                         <input class="checkbox" type="checkbox" name="department" id="sales" value="Sales">
                         Sales</label>
-                    <label class="text" for="finance">
+                    <label class="text">
                         <input class="checkbox" type="checkbox" name="department" id="finance" value="Finance">
                         Finance</label>
-                    <label class="text" for="engineer">
+                    <label class="text">
                         <input class="checkbox" type="checkbox" name="department" id="engineer" value="Engineer">
                         Engineer</label>
-                    <label class="text" for="others">
+                    <label class="text">
                         <input class="checkbox" type="checkbox" name="department" id="others" value="Others">
                         Others</label>
                 </div>
@@ -151,7 +151,7 @@
                     </select>
                     <select id="year" name="Year" required>
                         <option value="" selected>Year</option>
-                        <option value="2020">2021</option>
+                        <option value="2021">2021</option>
                         <option value="2020">2020</option>
                         <option value="2019">2019</option>
                         <option value="2018">2018</option>

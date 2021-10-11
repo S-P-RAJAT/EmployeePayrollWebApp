@@ -1,106 +1,93 @@
-class EmployeePayRollData{
+class EmployeePayRollData {
 
-    get id()
-    {
+    get id() {
         return this._id;
     }
 
-    set id(id)
-    {
+    set id(id) {
         let idRegex = RegExp('[1-9]{1}[0-9]*');
-        if(idRegex.test(id))
-        this._id = id;
+        if (idRegex.test(id))
+            this._id = id;
         else
-        throw 'Id is incorrect';
+            throw 'Id is incorrect';
     }
 
-    get name()
-    {
+    get name() {
         return this._name;
     }
 
-    set name(name)
-    {
+    set name(name) {
         let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
-        if(nameRegex.test(name))
-        this._name = name;
-        else 
-        throw 'Name is incorrect';
+        if (nameRegex.test(name))
+            this._name = name;
+        else {
+            alert("Name should be atleast 3 characters with First Capital!");
+            throw 'Name is incorrect';
+        }
     }
 
-    get profilePic()
-    {
+    get profilePic() {
         return this._profilePic;
     }
 
-    set profilePic(profilePic)
-    {
+    set profilePic(profilePic) {
         this._profilePic = profilePic;
     }
 
-    get gender()
-    {
+    get gender() {
         return this._gender;
     }
 
-    set gender(gender)
-    {
+    set gender(gender) {
         this._gender = gender;
     }
 
-    get department()
-    {
+    get department() {
         return this._department;
     }
 
-    set department(department)
-    {
+    set department(department) {
         this._department = department;
     }
 
-    get salary()
-    {
+    get salary() {
         return this._salary;
     }
 
-    set salary(salary)
-    {
+    set salary(salary) {
         this._salary = salary;
     }
 
-    get note()
-    {
+    get note() {
         return this._note;
     }
 
-    set note(note)
-    {
+    set note(note) {
         this._note = note;
     }
 
-    get startDate()
-    {
+    get startDate() {
         return this._startDate;
     }
 
-    set startDate(startDate)
-    {
-        let datee = new Date();
-        if(startDate<=datee)
-        {
-        this._startDate = startDate;
+    set startDate(startDate) {
+        let maxOldDate = new Date(new Date().setDate(new Date().getDate() - 30));
+        console.log(maxOldDate, startDate);
+        if (startDate <= new Date() && startDate >= maxOldDate) {
+            this._startDate = startDate;
         }
-        else
-        throw 'StartDate is incorrect';
+        else {
+            alert('StartDate is invalid - should not be a future date or 30 days before!');
+            throw ("StartDate is incorrect");
+        }
     }
 
-    toString()
-    {
-        const format = {year:'numeric', month:'long', day:'numeric'};
+    toString() {
+        const format = { year: 'numeric', month: 'long', day: 'numeric' };
         const date = this.startDate === undefined ? "undefined" :
-                     this.startDate.toLocaleDateString("en-US",format);
-        return "Name = "+this.name+", Gender = "+this.gender+", ProfilePic = \""+this.profilePic+"\", Department = ["+this.department+"], Salary = "+this.salary+
-                ", StartDate = "+date+", Note = \""+this.note+"\"";
+            this.startDate.toLocaleDateString("en-US", format);
+        return "Name = " + this.name + ", Gender = " + this.gender + ", ProfilePic = \"" + this.profilePic + "\", Department = [" + this.department + "], Salary = " + this.salary +
+            ", StartDate = " + date + ", Note = \"" + this.note + "\"";
     }
 
-} 
+}

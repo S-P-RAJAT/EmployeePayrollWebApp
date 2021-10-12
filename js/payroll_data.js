@@ -21,7 +21,6 @@ class EmployeePayRollData {
         if (nameRegex.test(name))
             this._name = name;
         else {
-            alert("Name should be atleast 3 characters with First Capital!");
             throw 'Name is incorrect';
         }
     }
@@ -72,12 +71,10 @@ class EmployeePayRollData {
 
     set startDate(startDate) {
         let maxOldDate = new Date(new Date().setDate(new Date().getDate() - 30));
-        console.log(maxOldDate, startDate);
         if (startDate <= new Date() && startDate >= maxOldDate) {
             this._startDate = startDate;
         }
         else {
-            alert('StartDate is invalid - should not be a future date or 30 days before!');
             throw ("StartDate is incorrect");
         }
     }

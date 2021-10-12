@@ -220,6 +220,13 @@ select {
     color: white;
 }
 
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
+
 @media only screen and (max-width: 1200px) {
     .form {
         padding: 40px 90px;

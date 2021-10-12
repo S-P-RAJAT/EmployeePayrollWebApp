@@ -23,10 +23,11 @@
     </header>
     <div class="form-content">
         <form class="form" action="#" onsubmit="save()">
-            <div class="form-head">Employee Payroll form</div>
+                        <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" name="name" id="name" placeholder="Your Name" required autocomplete="off">
+                <error-output class="name-text-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text">Profile image</label>
@@ -62,7 +63,7 @@
                 <label class="label text" for="gender">Gender</label>
                 <div>
                     <label>
-                        <input type="radio" name="gender" value="male">
+                        <input type="radio" name="gender" value="male" required>
                         <span class="text">Male</span>
                     </label>
                     <label>
@@ -72,7 +73,7 @@
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for="department" required>Department</label>
+                <label class="label text" for="department">Department</label>
                 <div>
                     <label class="text">
                         <input class="checkbox" type="checkbox" name="department" id="hr" value="HR">
@@ -158,6 +159,8 @@
                         <option value="2017">2017</option>
                         <option value="2016">2016</option>
                     </select>
+                    <error-output class="date-text-error" for="text"></error-output>
+
                 </div>
             </div>
             <div class="row-content">

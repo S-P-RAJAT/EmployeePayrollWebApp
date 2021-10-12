@@ -60,7 +60,8 @@ const createEmployeePayroll = () => {
     try {
         employeePayrollData.name = getInputValueById('#name');
     } catch (e) {
-        setErrorText(".name-text-error", e);
+        setErrorText(".name-text-error", " Please write valid name");
+        throw e;
     }
     employeePayrollData.profilePic = getSelectedValues('[name=profile]').pop();
     employeePayrollData.gender = getSelectedValues('[name=gender]').pop();
@@ -73,7 +74,8 @@ const createEmployeePayroll = () => {
     try {
         employeePayrollData.startDate = new Date(year, month, day);
     } catch (e) {
-        setErrorText(".date-text-error", e);
+        setErrorText(".date-text-error", "Please provide correct date");
+        throw e;
     }
     console.log(employeePayrollData.toString());
 

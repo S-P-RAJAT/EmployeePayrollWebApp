@@ -22,11 +22,12 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save()">
-                        <div class="form-head">Employee Payroll form</div>
+        <form class="form" action="#" onsubmit="save();return false" onreset="resetForm()">
+            <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" name="name" id="name" placeholder="Your Name" required autocomplete="off">
+                <input class="input" type="text" name="name" id="name" placeholder="Your Name" required
+                    autocomplete="off">
                 <error-output class="name-text-error" for="text"></error-output>
             </div>
             <div class="row-content">

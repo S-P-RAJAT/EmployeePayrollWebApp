@@ -106,8 +106,9 @@ body {
 .table{
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 15px;
-    min-width: 800px;
+    border-spacing: 0 5px;
+    width: 80%;
+    margin: auto;
 }
 
 td, th{

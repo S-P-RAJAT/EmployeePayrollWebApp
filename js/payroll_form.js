@@ -73,7 +73,7 @@ const createEmployeePayroll = () => {
     let month = parseInt(getInputValueById('#month')) - 1;
     let day = getInputValueById('#day');
     try {
-        employeePayrollData.startDate = new Date(year, month, day);
+        employeePayrollData.startDate = (new Date(year, month, day));
     } catch (e) {
         setErrorText(".date-text-error", "Please provide correct date");
         throw e;

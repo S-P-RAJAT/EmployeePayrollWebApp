@@ -29,7 +29,7 @@
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" name="name" id="name" required
-                    autocomplete="off">
+                    autocomplete="off" autofocus>
                 <error-output class="name-text-error" for="text"></error-output>
             </div>
             <div class="row-content">
@@ -65,12 +65,12 @@
                 <label class="label text" for="gender">Gender</label>
                 <div class="profile-radio-content">
                     <label class="container">
-                        <input type="radio" name="gender" value="male" required>
+                        <input type="radio" name="gender" value="Male" required>
                         <span class="checkmark"></span>
                         <span class="text gender">Male</span>
                     </label>
                     <label class="container">
-                        <input type="radio" name="gender" value="female">
+                        <input type="radio" name="gender" value="Female">
                         <span class="checkmark"></span>
                         <span class="text gender">Female</span>
                     </label>
@@ -174,7 +174,7 @@
             <div class="button-parent">
                 <a href="./payroll_home.html" class="reset-button button cancel-button">Cancel</a>
                 <span class="submit-reset">
-                    <button type="submit" class="button submit-button" id="submit-button">Submit</button>
+                    <button type="submit" class="button submit-button-disabled" id="submit-button" disabled>Submit</button>
                     <button type="reset" class="reset-button button">Reset</button>
                 </span>
             </div>

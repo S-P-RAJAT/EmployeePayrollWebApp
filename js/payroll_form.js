@@ -38,6 +38,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         output.textContent = salary.value;
     });
 
+    let button = document.getElementById("submit-button"); 
+    name.addEventListener('input', function () {
+        if(name.value==""){
+            button.classList.remove("submit-button");
+    button.classList.add("submit-button-disabled");
+        } else{   button.classList.remove("submit-button-disabled");
+    button.classList.add("submit-button");
+    button.disabled = false;
+    }
+    });
 });
 
 const setErrorText = (errorName, errorMessage) => {
@@ -108,7 +118,7 @@ function createAndUpdateStorage(employeePayrollData) {
     else {
         employeePayrollList = [employeePayrollData]
     }
-    alert(employeePayrollList.toString());
+    alert("Saved successfully!");
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
 }
 const resetForm = () => {
@@ -142,3 +152,4 @@ const resetForm = () => {
     const element = document.querySelector(query);
     element.value = value;
   }
+

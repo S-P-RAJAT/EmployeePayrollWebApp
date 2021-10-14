@@ -190,7 +190,18 @@ select {
     opacity: 1;
     color: white;
 }
-
+.submit-button-disabled{
+    border: none;
+    background-color: #f5f5f5;
+    margin-right: 30px;
+    background: #E2E2E2 0% 0% no-repeat padding-box;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    opacity: 1;
+}
+.submit-button-disabled:hover{
+    cursor: not-allowed;
+}
 .cancel-button {
     text-decoration: none;
     text-align: center;
@@ -297,9 +308,10 @@ error-output {
 /* Hide the browser's default radio button */
 
 .container input {
-    display: none;
     opacity: 0;
     cursor: pointer;
+    width: 0.5px;
+    margin-right: -8px;
 }
 
 /* Create a custom radio button */

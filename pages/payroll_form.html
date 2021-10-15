@@ -11,6 +11,7 @@
     <script src="../js/payroll_form.js"></script>
     <script src="../js/payroll_data.js"></script>
     <script src="../js/utility.js"></script>
+    <script src="../js/site_properties.js"></script>
     <title>Employee payroll form</title>
 </head>
 
@@ -25,7 +26,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save();return false" onreset="resetForm()">
+        <form class="form" action="#" onsubmit="save(event)" onreset="resetForm()">
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>

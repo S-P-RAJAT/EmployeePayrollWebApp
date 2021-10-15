@@ -71,12 +71,14 @@ class EmployeePayRollData {
 
     set startDate(startDate) {
         let maxOldDate = new Date(new Date().setDate(new Date().getDate() - 30));
-        if (startDate <= new Date() && startDate >= maxOldDate) {
-            this._startDate = startDate;
+        if (startDate < maxOldDate) {
+            throw ("Start Date is beyond 30 days!");
         }
-        else {
-            throw ("StartDate is incorrect");
+        if (startDate > new Date()) {
+            throw ("Start Date is a future date!");
         }
+        this._startDate = startDate;
+
     }
 
     toString() {

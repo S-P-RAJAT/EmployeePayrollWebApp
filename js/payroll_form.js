@@ -67,7 +67,16 @@ const save = () => {
 }
 
 const createEmployeePayroll = () => {
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    let max = 0;
+    if(employeePayrollList){
+        for(const empData of employeePayrollList){
+            if(max<empData._id)
+            max = empData._id;
+        }
+    }
     let employeePayrollData = new EmployeePayRollData();
+    employeePayrollData.id = parseInt(max) + 1;
     try {
         employeePayrollData.name = getInputValueById('#name');
     } catch (e) {

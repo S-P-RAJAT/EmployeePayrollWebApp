@@ -167,6 +167,10 @@ td img{
     margin-bottom: 8px;
 }
 
+#rupee{
+    color: #707070;
+}
+
 @media only screen and (max-width: 950px) {
     #table-main{
         width: 90%;

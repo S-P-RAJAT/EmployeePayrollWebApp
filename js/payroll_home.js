@@ -53,3 +53,10 @@ const remove = (node) => {
   localStorage.setItem("EmployeePayrollList",JSON.stringify(empPayrollList));
   createInnerHtml();
 }
+
+const update = (node) => {
+    let empPayrollData = empPayrollList.find(employee => node.id == employee._id);
+    if(!empPayrollData) return;
+    localStorage.setItem("editEmp",JSON.stringify(empPayrollData));
+    window.location.replace(site_properties.add_employee_page);
+  }

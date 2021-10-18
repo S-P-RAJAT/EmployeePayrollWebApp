@@ -2,8 +2,8 @@
   "EmployeePayrollDB": [
     {
       "id": 1,
-      "_name": "Mark",
-      "_gender": "male",
+      "_name": "Narayan Mahadevan",
+      "_gender": "Male",
       "_department": [
         "Engineering",
         "Finance"
@@ -16,7 +16,7 @@
     {
       "id": 2,
       "_name": "Bill Gates",
-      "_gender": "male",
+      "_gender": "Male",
       "_department": [
         "Engineering"
       ],
@@ -26,8 +26,8 @@
       "_profilePic": "../assets/profile-images/Ellipse -1.png"
     },
     {
-      "_name": "Amarpa Shashanka Keerthi Kumar",
-      "_gender": "female",
+      "_name": "Anjali Verma",
+      "_gender": "Female",
       "_department": [
         "Sales"
       ],

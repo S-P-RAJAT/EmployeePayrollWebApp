@@ -40,6 +40,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     salary.addEventListener('input', function () {
         output.textContent = salary.value;
     });
+    document .querySelector(".cancel-button").href = site_properties.home_page;
     checkForUpdate();
 
     let button = document.getElementById("submit-button");

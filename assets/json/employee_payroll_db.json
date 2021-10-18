@@ -5,11 +5,12 @@
       "_name": "Narayan Mahadevan",
       "_gender": "Male",
       "_department": [
-        "Engineering",
-        "Finance"
+        "Sales",
+        "Finance",
+        "Engineer"
       ],
-      "_salary": "500000",
-      "_startDate": "9 Oct 2021",
+      "_salary": "428900",
+      "_startDate": "2021-10-05T18:30:00.000Z",
       "_note": "All In One",
       "_profilePic": "../assets/profile-images/Ellipse -3.png"
     },
@@ -18,10 +19,10 @@
       "_name": "Bill Gates",
       "_gender": "Male",
       "_department": [
-        "Engineering"
+        "Finance"
       ],
       "_salary": "500000",
-      "_startDate": "14 Oct 2021",
+      "_startDate": "2021-10-13T18:30:00.000Z",
       "_note": "Terrific Engineer",
       "_profilePic": "../assets/profile-images/Ellipse -1.png"
     },
@@ -32,7 +33,7 @@
         "Sales"
       ],
       "_salary": "400000",
-      "_startDate": "15 Oct 2021",
+      "_startDate": "2021-10-14T18:30:00.000Z",
       "_note": "",
       "_profilePic": "../assets/profile-images/Ellipse -1.png",
       "id": 3

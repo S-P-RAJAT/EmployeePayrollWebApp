@@ -1,16 +1,6 @@
 class EmployeePayRollData {
 
-    get id() {
-        return this._id;
-    }
-
-    set id(id) {
-        let idRegex = RegExp('[1-9]{1}[0-9]*');
-        if (idRegex.test(id))
-            this._id = id;
-        else
-            throw 'Id is incorrect';
-    }
+    id;
 
     get name() {
         return this._name;

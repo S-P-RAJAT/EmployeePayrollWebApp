@@ -69,13 +69,17 @@ const setErrorText = (errorName, errorMessage) => {
 const save = (event) => {
     event.preventDefault();
     event.stopPropagation();
-    try {
+    try{
         setEmployeePayrollObject();
+        if(site_properties.use_local_storage.match("true")){
         createAndUpdateStorage();
         resetForm();
         window.location.replace(site_properties.home_page);
-    } catch (e) {
-        console.log("problem" + e);
+        }else {
+            createEmployeePayroll();
+        }
+    }catch(e){
+        console.log(e);
         return;
     }
 }
@@ -147,6 +151,18 @@ const createNewEmployeeId = () => {
     empID = !empID ? 1 : (parseInt(empID) + 1).toString();
     localStorage.setItem("EmployeeID", empID);
     return empID;
+}
+const createEmployeePayroll = () => {
+    let postURL = site_properties.server_url;
+    let methodCall = "POST";
+    makeServiceCall(methodCall, postURL, true, employeePayrollObj)
+        .then(data => {
+            resetForm();
+            window.location.replace(site_properties.home_page);
+        })
+        .catch(error => {
+            throw error;
+        });
 }
 
 const resetForm = () => {

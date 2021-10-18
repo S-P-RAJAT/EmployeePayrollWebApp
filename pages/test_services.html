@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Test Ajax Services and Promise</title>
+    <style>
+        .body{
+            margin: auto;
+        }
+        div{
+            border: 1px solid black;
+            background-color: lightblue;
+            padding: 50px;
+            width: 80%;
+            font-size: large;
+            margin-top: 50px;
+        }
+    </style>
+    <script src="../js/http_services.js"></script>
+</head>
+<body>
+    <h1>The Test Services Result</h1>
+    <div id="get_services"></div>
+    <div id="delete_services"></div>
+    <div id="post_services"></div>
+
+    <script>
+        const getElement = document.querySelector('#get_services');
+        const getURL =  "http://127.0.0.1:3000/EmployeePayrollDB/1";
+        makeServiceCall("GET",getURL,true)
+                .then(data => {
+                    getElement.textContent = "Get User Data: "+data
+                })
+                .catch(error =>
+                    getElement.textContent = "GET Error Status: "+JSON.stringify(error));
+
+        const deleteElement = document.querySelector('#delete_services');
+        const deleteURL = "http://127.0.0.1:3000/EmployeePayrollDB/3";
+        makeServiceCall("DELETE",deleteURL,false)
+                .then(data => {
+                    deleteElement.textContent = "User Deleted: "+data;  
+                })
+                .catch(error =>
+                    deleteElement.textContent = "DELETE Error Status: "+JSON.stringify(error));
+
+        const postElement = document.querySelector('#post_services');
+        const postURL = "http://127.0.0.1:3000/EmployeePayrollDB";
+        const empData = {
+                        _name: "Amarpa Shashanka Keerthi Kumar",
+                        _gender: "female",
+                        _department: [
+                            'Sales'
+                        ],
+                        _salary: "400000",
+                        _startDate: "29 Oct 2019",
+                        _note: "",
+                        _profilePic: "../assets/profile-images/Ellipse -1.png"
+                        };
+        makeServiceCall("POST",postURL,true,empData)
+                .then(data => {
+                    postElement.textContent = "User Added: "+data;  
+                })
+                .catch(error =>
+                    postElement.textContent = "POST Error Status: "+JSON.stringify(error));
+    </script>
+</body>
+</html>

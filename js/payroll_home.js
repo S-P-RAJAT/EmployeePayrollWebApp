@@ -69,9 +69,20 @@ const remove = (node) => {
     const index = empPayrollList.map(employee => employee.id)
         .indexOf(empPayrollData.id);
     empPayrollList.splice(index, 1);
-    document.querySelector(".emp-count").textContent = empPayrollList.length;
-    localStorage.setItem("EmployeePayrollList", JSON.stringify(empPayrollList));
-    createInnerHtml();
+    if(site_properties.use_local_storage.match("true")) {
+        document.querySelector(".emp-count").textContent = empPayrollList.length;
+        localStorage.setItem("EmployeePayrollList",JSON.stringify(empPayrollList));
+        createInnerHtml();
+      }else {
+        const deleteURL = site_properties.server_url + empPayrollData.id.toString();
+        makeServiceCall("DELETE", deleteURL, true)
+            .then(data => {
+                createInnerHtml();
+            })
+            .catch(error => {
+                console.log("DELETE Error Status: "+JSON.stringify(error));
+            });
+      }
 }
 
 const update = (node) => {

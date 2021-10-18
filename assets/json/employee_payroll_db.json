@@ -37,19 +37,6 @@
       "_note": "",
       "_profilePic": "../assets/profile-images/Ellipse -1.png",
       "id": 3
-    },
-    {
-      "_name": "Mark",
-      "_profilePic": "../assets/profile-images/Ellipse -3.png",
-      "_gender": "Male",
-      "_department": [
-        "HR",
-        "Sales"
-      ],
-      "_salary": "434200",
-      "_note": "",
-      "_startDate": "2021-10-07T18:30:00.000Z",
-      "id": 4
     }
   ]
 }
